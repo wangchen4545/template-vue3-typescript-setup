@@ -1,3 +1,3 @@
 # template
-1.vue-cli3-template
-2.vue-cli3-template2
+1.vue-vite-ts-template
+2.vue-cli3-template-webpack4

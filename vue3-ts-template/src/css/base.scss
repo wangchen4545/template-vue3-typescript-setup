@@ -1,0 +1,285 @@
+html,
+ body,
+ div,
+ span,
+ applet,
+ object,
+ iframe,
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6,
+ p,
+ blockquote,
+ pre,
+ a,
+ abbr,
+ acronym,
+ address,
+ big,
+ cite,
+ code,
+ del,
+ dfn,
+ em,
+ img,
+ ins,
+ kbd,
+ q,
+ s,
+ samp,
+ small,
+ strike,
+ strong,
+ sub,
+ sup,
+ tt,
+ var,
+ b,
+ u,
+ i,
+ center,
+ dl,
+ dt,
+ dd,
+ ol,
+ ul,
+ li,
+ fieldset,
+ form,
+ label,
+ legend,
+ table,
+ caption,
+ tbody,
+ tfoot,
+ thead,
+ tr,
+ th,
+ td,
+ article,
+ aside,
+ canvas,
+ details,
+ embed,
+ figure,
+ figcaption,
+ footer,
+ header,
+ menu,
+ nav,
+ output,
+ ruby,
+ section,
+ summary,
+ time,
+ mark,
+ audio,
+ video,
+ input {
+	 margin: 0;
+	 padding: 0;
+	 border: 0;
+	 font-size: 100%;
+	 font-weight: normal;
+	 vertical-align: baseline;
+ }
+ 
+ /* HTML5 display-role reset for older browsers */
+ article,
+ aside,
+ details,
+ figcaption,
+ figure,
+ footer,
+ header,
+ menu,
+ nav,
+ section {
+	 display: block;
+ }
+ 
+ body {
+	 line-height: 1;
+ }
+ 
+ blockquote,
+ q {
+	 quotes: none;
+ }
+ 
+ blockquote:before,
+ blockquote:after,
+ q:before,
+ q:after {
+	 content: none;
+ }
+ 
+ table {
+	 border-collapse: collapse;
+	 border-spacing: 0;
+ }
+ 
+ /* custom */
+ 
+ a {
+	 color: #7e8c8d;
+	 -webkit-backface-visibility: hidden;
+	 text-decoration: none;
+ }
+ 
+ li {
+	 list-style: none;
+ }
+ 
+ body {
+	 -webkit-text-size-adjust: none;
+	 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+ }
+ 
+ input,
+ textarea {
+	 -webkit-user-select: auto;
+	 /*webkit浏览器*/
+	 margin: 0px;
+	 padding: 0px;
+	 outline: none;
+ }
+ 
+ * {
+	 box-sizing: border-box;
+ }
+ 
+ html,
+ body {
+	 min-height: 100%;
+	 width: 100%;
+	 height: 100%;
+	 background: transparent;
+ }
+ 
+ #app {
+	 min-height: 100%;
+	 height: 100%;
+	 width: 100%;
+ }
+ 
+ body {
+	 font-family: 'PingFangSC-Regular';
+	 -webkit-font-smoothing: antialiased;
+	 -moz-osx-font-smoothing: grayscale;
+	 // background-color: #FFFFFF;
+ }
+ 
+ /**===============1px边框=====================*/
+ .jrm-border-1px {
+	 position: relative;
+ }
+ 
+ .jrm-border-1px:before {
+	 display: block;
+	 visibility: visible;
+	 content: '';
+	 overflow: auto;
+	 position: absolute;
+	 top: 0;
+	 right: 0;
+	 bottom: 0;
+	 left: 0;
+	 z-index: 0;
+	 -webkit-transform-origin: 0 0;
+	 transform-origin: 0 0;
+	 -webkit-transform: scale(1);
+	 transform: scale(1);
+	 pointer-events: none;
+	 -webkit-backface-visibility: hidden;
+	 backface-visibility: hidden;
+ }
+ 
+ @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	 .jrm-border-1px:before {
+		 right: -100%;
+		 bottom: -100%;
+		 -webkit-transform: scale(0.5);
+		 transform: scale(0.5);
+	 }
+ }
+ 
+ @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+	 .jrm-border-1px:before {
+		 right: -200%;
+		 bottom: -200%;
+		 -webkit-transform: scale(0.333333);
+		 transform: scale(0.333333);
+	 }
+ }
+ 
+ .jrm-border-1px {
+	 &.jrm-border-all:before {
+		 border: 1px solid #e8e8e8;
+	 }
+ 
+	 &.jrm-border-top:before {
+		 border-top: 1px solid #e8e8e8;
+	 }
+ 
+	 &.jrm-border-bottom:before {
+		 border-bottom: 1px solid #e8e8e8;
+	 }
+ 
+	 &.jrm-border-bottom-e6e6e6:before {
+		 border-bottom: 1px solid #e6e6e6;
+	 }
+ 
+	 &.jrm-border-left:before {
+		 border-left: 1px solid #e8e8e8;
+	 }
+ 
+	 &.jrm-border-right:before {
+		 border-right: 1px solid #e8e8e8;
+	 }
+ 
+	 &.jrm-border-left-fff:before {
+		 border-left: 1px solid rgba(255, 255, 255, 0.15);
+	 }
+ 
+	 &.jrm-border-right-ddd:before {
+		 border-right: 1px solid #ddd;
+	 }
+ 
+	 &.jrm-border-right-eee:before {
+		 border-right: 1px solid rgba(238, 238, 238, 0.2);
+	 }
+ 
+	 &.jrm-border-all-ddd:before {
+		 border: 1px solid #ddd;
+	 }
+ 
+	 &.jrm-border-bottom-e5e5e5:before {
+		 border-bottom: 1px solid #e5e5e5;
+	 }
+ }
+
+ /**===============placeholder样式设置=====================*/
+ :-moz-placeholder {
+	 /* Mozilla Firefox 4 to 18 */
+	 color: #aaa;
+ }
+ 
+ ::-moz-placeholder {
+	 /* Mozilla Firefox 19+ */
+	 color: #aaa;
+ }
+ 
+ input:-ms-input-placeholder {
+	 color: #aaa;
+ }
+ 
+ input::-webkit-input-placeholder {
+	 color: #aaa;
+ }
+
+ 
+ 

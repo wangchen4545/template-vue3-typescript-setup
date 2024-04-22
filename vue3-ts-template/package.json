@@ -1,0 +1,45 @@
+{
+  "name": "{{name}}",
+  "version": "0.0.0",
+  "private": true,
+  "auth": "{{auth}}",
+  "scripts": {
+    "serve": "sudo vue-cli-service serve --mode dev",
+    "lint": "vue-cli-service lint",
+    "build-test": "rm -rf ./dist && vue-cli-service build --mode dev",
+    "build-yufa": "rm -rf ./dist && vue-cli-service build --mode yufa",
+    "build-pre": "rm -rf ./dist && vue-cli-service build --mode pre",
+    "build-online": "rm -rf ./dist && vue-cli-service build --mode production",
+    "zip": "cd ./dist/ && sudo zip -p -r ./$npm_package_name.zip ./$npm_package_name/* && cd ../",
+    "prod-test": "sudo npm run build-test && npm run zip && node upload-test.js",
+    "prod-minner": "sudo npm run build-yufa && npm run zip && node upload-minner.js",
+    "prod-pre": "sudo npm run build-pre && npm run zip && node upload-minner.js"
+  },
+  "dependencies": {
+    "@jd/mint-ui": "^1.0.5",
+    "axios": "^0.27.2",
+    "querystring": "^0.2.1",
+    "request": "^2.88.2",
+    "vue": "^3.2.13",
+    "vue-class-component": "^8.0.0-0",
+    "vue-router": "^4.0.3"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-plugin-typescript": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "@vue/eslint-config-typescript": "^9.1.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "html-webpack-plugin": "^5.5.0",
+    "lib-flexible": "^0.3.2",
+    "postcss-px2rem": "^0.3.0",
+    "sass": "^1.54.2",
+    "sass-loader": "^13.0.2",
+    "typescript": "~4.5.5",
+    "uglifyjs-webpack-plugin": "^2.2.0"
+  }
+}

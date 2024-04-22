@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,viewport-fit=cover" />
+		<title>​​​​​</title>
+		<meta http-equiv="pragma" content="no-cache" />
+		<!--SGM监控-->
+		<script crossorigin src="https://sgm-static.jd.com/sgm-2.8.0.js" name="SGMH5" sid="6f2ac4d675e247e9a7c4b707f41c8dfc" appKey="xjk-activity" ></script>
+		<!-- 金融桥 -->
+		<script src="https://res.jr.jd.com/jssdk/jrbridge/2.1.3/jrbridge.js"></script>
+	</head>
+
+	<body>
+		<div id="app"></div>
+	</body>
+	<script src="https://m.jr.jd.com/crayfish/zui/zepto/1.1.6/zepto.js"></script>
+  <% if(process.env.VUE_APP_MODE === 'test') { %>
+    
+  <% } %>
+  <% if(process.env.VUE_APP_MODE === 'yufa') { %>
+    
+  <% } %>
+  <% if(process.env.VUE_APP_MODE === 'production') { %>
+    
+  <% } %>
+	<!--奇点 JS SDK 接入代码-->
+	<script>
+		(function(){var _=window;_.__qd__||(_.__qd__={config:{sid:"39ECN"}})})();
+	</script>
+	<script async name="qidian-sdk" crossorigin="anonymous" src="//qdsdk.jd.com/2.0.0/qd.js"></script>
+</html>
